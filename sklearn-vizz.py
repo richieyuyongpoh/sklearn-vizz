@@ -35,7 +35,7 @@ choice = st.sidebar.radio(
     
 )
 
-st.write(f"## You Have Selected <font color='blue'>{choice}</font> Dataset", unsafe_allow_html=True)
+st.write(f"## You Have Selected <font color='Aquamarine'>{choice}</font> Dataset", unsafe_allow_html=True)
 
 def get_default_dataset(name):
     data = None
@@ -97,7 +97,7 @@ def add_dataset_ui(choice_name):
 
            y = LabelEncoder().fit_transform(y)
         else:
-           st.write(f"## <font color='blue'>Note: Please upload a CSV file to analyze the data.</font>", unsafe_allow_html=True)
+           st.write(f"## <font color='Aquamarine'>Note: Please upload a CSV file to analyze the data.</font>", unsafe_allow_html=True)
 
     return X,y, X_names, X1
 
@@ -121,7 +121,7 @@ st.write("## 1: Summary (X variables)")
 
 
 if len(X)==0:
-   st.write("<font color='blue'>Note: Predictors @ X variables have not been selected.</font>", unsafe_allow_html=True)
+   st.write("<font color='Aquamarine'>Note: Predictors @ X variables have not been selected.</font>", unsafe_allow_html=True)
 else:
    st.write('Shape of predictors @ X variables :', X.shape)
    st.write('Summary of predictors @ X variables:', pd.DataFrame(X).describe())
@@ -129,7 +129,7 @@ else:
 st.write("## 2: Summary (y variable)")
 
 if len(y)==0:
-   st.write("<font color='blue'>Note: Label @ y variable has not been selected.</font>", unsafe_allow_html=True)
+   st.write("<font color='Aquamarine'>Note: Label @ y variable has not been selected.</font>", unsafe_allow_html=True)
 elif len(np.unique(y)) <5:
      st.write('Number of classes:', len(np.unique(y)))
 
@@ -191,18 +191,18 @@ if len(X)!=0 and len(y)!=0:
   st.write(df)
 
 else: 
-   st.write("<font color='blue'>Note: No classification report generated.</font>", unsafe_allow_html=True)
+   st.write("<font color='Aquamarine'>Note: No classification report generated.</font>", unsafe_allow_html=True)
 
 
 st.write("## 4: Principal Component Analysis Plot")
 suitable = 1
 if len(X_names) <2:
-  st.write("<font color='blue'>Note: No PCA plot as it requires at least two predictors.</font>", unsafe_allow_html=True)
+  st.write("<font color='Aquamarine'>Note: No PCA plot as it requires at least two predictors.</font>", unsafe_allow_html=True)
   suitable = 0
 else:
     for names in X_names:
         if names in cat_var:
-           st.write("<font color='blue'>Note: No PCA plot as it only supports numerical predictors.</font>", unsafe_allow_html=True)
+           st.write("<font color='Aquamarine'>Note: No PCA plot as it only supports numerical predictors.</font>", unsafe_allow_html=True)
            suitable = 0
            break
 
