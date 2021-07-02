@@ -17,7 +17,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report
 
 
-st.title('Demo: Machine Learning - CLASSIFICATION')
+st.title('Machine Learning - CLASSIFICATION')
 
 st.sidebar.write("""
 This is a web app demo using python libraries such as Streamlit, Sklearn etc
