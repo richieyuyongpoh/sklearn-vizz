@@ -18,20 +18,6 @@ from sklearn.metrics import classification_report
 
 
 
-hide_streamlit_style = """
-            <style>
-            #MainMenu {visibility: hidden;}
-            #footer {visibility: hidden;}
-            </style>
-            """
-st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
-
-hide_footer_style = """
-    <style>
-    .reportview-container .main footer {visibility: hidden;}    
-    """
-st.markdown(hide_footer_style, unsafe_allow_html=True)
-
 st.title('Machine Learning - CLASSIFICATION')
 
 st.sidebar.write("""
@@ -237,3 +223,12 @@ if suitable == 1:
    plt.ylabel('Principal Component 2')
    plt.colorbar()
    st.pyplot(fig)
+            
+            
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
